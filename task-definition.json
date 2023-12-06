@@ -35,7 +35,17 @@
           "awslogs-stream-prefix": "ecs"
         },
         "secretOptions": []
-      }
+      },
+      "secrets": [
+        {
+          "name": "sec1",
+          "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:265981886387:secret:n99/sec1-opVEFn"
+        },
+        {
+          "name": "sec2",
+          "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:265981886387:secret:n99/sec2-Yqeghi"
+        }
+      ]
     }
   ],
   "family": "n99-task-try2",
@@ -90,11 +100,5 @@
   },
   "registeredAt": "2023-12-06T13:14:09.081Z",
   "registeredBy": "arn:aws:iam::265981886387:root",
-  "tags": [],
-  "secrets": [
-    {
-      "name": "sec1",
-      "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:265981886387:secret:n99/sec1-opVEFn"
-    }
-  ]
+  "tags": []
 }
