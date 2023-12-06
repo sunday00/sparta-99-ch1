@@ -5,8 +5,9 @@ import { Injectable } from '@nestjs/common';
 export class HealthCustomIndicator extends HealthIndicator {
   async isHealthy() {
     return this.getStatus('updated', true, {
-      date: '20231206 12:36',
+      date: '20231207 02:03',
       sec: process.env['sec1'] || null,
+      sec2: process.env['sec2'] || null,
     });
   }
 }
