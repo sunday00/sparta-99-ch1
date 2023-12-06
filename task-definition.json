@@ -40,7 +40,7 @@
   ],
   "family": "n99-task-try2",
   "taskRoleArn": "arn:aws:iam::265981886387:role/ecsTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::265981886387:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::265981886387:role/n99-ecs-task-exe-with-sec-man",
   "networkMode": "awsvpc",
   "revision": 1,
   "volumes": [],
@@ -90,5 +90,11 @@
   },
   "registeredAt": "2023-12-06T13:14:09.081Z",
   "registeredBy": "arn:aws:iam::265981886387:root",
-  "tags": []
+  "tags": [],
+  "secrets": [
+    {
+      "name": "sec1",
+      "valueFrom": "arn:aws:secretsmanager:ap-northeast-2:265981886387:secret:n99/sec1-opVEFn"
+    }
+  ]
 }
