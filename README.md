@@ -6,3 +6,19 @@
 
 ### url
 http://n99-alb2-356935481.ap-northeast-2.elb.amazonaws.com/health
+
+### docker build
+```
+docker build --platform=linux/amd64 -t spa99-nest:n6 . 
+
+#  docker build --platform=linux/amd64 -t spa99-nest:[version-tag] .
+
+docker tag spa99-nest:n6 265981886387.dkr.ecr.ap-northeast-2.amazonaws.com/spa99-nest:n6
+
+#  docker tag spa99-nest:[version-tag] 265981886387.dkr.ecr.ap-northeast-2.amazonaws.com/spa99-nest:[version-tag]
+
+docker push 265981886387.dkr.ecr.ap-northeast-2.amazonaws.com/spa99-nest:n6
+
+#  docker push 265981886387.dkr.ecr.ap-northeast-2.amazonaws.com/spa99-nest:[version-tag]
+```
+
